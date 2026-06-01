@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <style>
+        /* Configurações Reset e Cores Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-green: #2e7d32;
+            --light-green: #4caf50;
+            --dark-earth: #3e2723;
+            --light-bg: #f1f8e9;
+            --white: #ffffff;
+            --text-dark: #333333;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho e Navegação */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+
+        .logo span {
+            color: var(--dark-earth);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Seção Hero (Banner Principal) */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--light-green);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-green);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-earth);
+            font-size: 2rem;
+        }
+
+        /* Grid de Pilares */
+        .grid-pilares {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-green);
+        }
+
+        .card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Seção Destaque / Sobre */
+        .sobre-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .sobre-texto {
+            flex: 1;
+            min-w宽th: 300px;
+        }
+
+        .sobre-texto h2 {
+            color: var(--dark-earth);
+            margin-bottom: 1rem;
+        }
+
+        .sobre-texto p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .sobre-imagem {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .sobre-imagem img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--dark-earth);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Agro<span>Sustentável</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#equilibrio">O Equilíbrio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Agro forte, futuro sustentável</h1>
+        <p>O equilíbrio perfeito entre a alta produtividade no campo e a preservação do meio ambiente.</p>
+        <a href="#pilares" class="btn">Saiba Mais</a>
+    </section>
+
+    <main>
+        
+        <section id="pilares">
+            <h2 class="section-title">Nossos Pilares de Atuação</h2>
+            <div class="grid-pilares">
+                <div class="card">
+                    <h3>Produtividade Eficiente</h3>
+                    <p>Uso de tecnologias de precisão e manejo inteligente do solo para produzir mais alimentos por hectare, reduzindo a necessidade de expansão de novas áreas.</p>
+                </div>
+                <div class="card">
+                    <h3>Conservação Ambiental</h3>
+                    <p>Práticas focadas na preservação de recursos hídricos, manutenção de áreas de reserva legal e proteção da biodiversidade local.</p>
+                </div>
+                <div class="card">
+                    <h3>Inovação Verde</h3>
+                    <p>Adoção de bioinsumos, rotação de culturas e fontes de energia renovável para mitigar a pegada de carbono no setor do agronegócio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="equilibrio" class="sobre-container">
+            <div class="sobre-texto">
+                <h2>Alimentar o mundo protegendo o planeta</h2>
+                <p>O grande desafio do século XXI é garantir a segurança alimentar global sem comprometer os ecossistemas. Acreditamos que a força do agronegócio não caminha separada da responsabilidade ecológica.</p>
+                <p>Através do monitoramento inteligente, práticas de plantio direto e respeito aos ciclos naturais, mostramos que o campo pode produzir com fartura e, ao mesmo tempo, ser o maior guardião das nossas florestas e rios.</p>
+            </div>
+            <div class="sobre-imagem">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=600&q=80" alt="Plantação sustentável e tecnologia">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agro Forte, Futuro Sustentável. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
