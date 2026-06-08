@@ -8,55 +8,71 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo">AgroSustentável</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">O Equilíbrio</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Agro<span>Sustentável</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pilares">Pilares</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>O caminho para a segurança alimentar através da responsabilidade ambiental.</p>
+            <a href="#pilares" class="btn-primary">Descubra Como</a>
+        </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <video autoplay muted loop id="bg-video">
-            <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27c34360578efca19cbaf1340f1d11270ae796d&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
-            Seu navegador não suporta vídeos.
-        </video>
-        <div class="hero-content">
-            <h1>Agro Forte, Futuro Sustentável</h1>
-            <p>O equilíbrio perfeito entre a alta produção agrícola e a preservação do meio ambiente.</p>
-            <a href="#sobre" class="btn">Saiba Mais</a>
-        </div>
-    </section>
-
-    <section id="sobre" class="content-section">
-        <h2>Produzir sem Destruir</h2>
-        <div class="grid-2">
-            <div class="text-box">
-                <p>O futuro do planeta depende de um agronegócio inteligente. A tecnologia atual permite monitorar safras, economizar água e utilizar defensivos de forma cirúrgica, garantindo a segurança alimentar sem agredir a biodiversidade.</p>
-                <p>Práticas como a rotação de culturas, o plantio direto e a integração lavoura-pecuária-floresta (ILPF) são pilares dessa nova era onde a produtividade caminha lado a lado com a conservação.</p>
+    <section id="pilares" class="section-container">
+        <h2 class="section-title">O Equilíbrio na Prática</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=500&q=80" alt="Tecnologia no campo">
+                </div>
+                <div class="card-content">
+                    <h3>Tecnologia Verde</h3>
+                    <p>O uso de drones, sensores e inteligência artificial otimiza os recursos hídricos e reduz drasticamente o desperdício de insumos na lavoura.</p>
+                </div>
             </div>
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Tecnologia no Campo">
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d15ef3752d?auto=format&fit=crop&w=500&q=80" alt="Solo protegido">
+                </div>
+                <div class="card-content">
+                    <h3>Conservação do Solo</h3>
+                    <p>Técnicas como o plantio direto e a rotação de culturas protegem os nutrientes da terra, evitando a erosão e mantendo o solo produtivo por gerações.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="galeria" class="gallery-section">
-        <h2>Nossa Visão em Imagens</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500937386664-56d15ef3752d?auto=format&fit=crop&w=400&q=80" alt="Campo Verde"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=400&q=80" alt="Tecnologia Agrícola"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=400&q=80" alt="Colheita Sustentável"></div>
+    <section id="galeria" class="bg-light section-container">
+        <h2 class="section-title">Nossa Visão em Imagens</h2>
+        <div class="gallery-layout">
+            <div class="gallery-thumb">
+                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=400&q=80" alt="Plantação sustentável">
+            </div>
+            <div class="gallery-thumb">
+                <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=400&q=80" alt="Colheita consciente">
+            </div>
+            <div class="gallery-thumb">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=400&q=80" alt="Natureza e campo">
+            </div>
         </div>
     </section>
 
-    <footer id="contato">
+    <footer id="contato" class="site-footer">
         <p>&copy; 2026 AgroSustentável. Cultivando o amanhã hoje.</p>
-        <button id="btn-alerta">Clique para uma dica sustentável</button>
+        <button id="btn-alerta" class="btn-footer">Clique para uma dica sustentável</button>
     </footer>
 
     <script src="script.js"></script>
